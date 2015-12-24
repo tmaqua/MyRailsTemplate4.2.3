@@ -21,5 +21,11 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
+  username: <%= Settings.mysql.username %>
+  password: <%= Settings.mysql.passward %>
+  socket: <%= Settings.mysql.socket %>
+  host: <%= Settings.mysql.host %>
+  database: APPNAME_production
