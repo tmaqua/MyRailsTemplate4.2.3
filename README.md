@@ -1,7 +1,8 @@
 # Env.
  - Ruby  2.2.0
  - Rails 4.2.3
- - SQLite3
+ - SQLite3: develop & test
+ - MySQL: production
  - Slim
  - Rspec
  - FactoryGirl
