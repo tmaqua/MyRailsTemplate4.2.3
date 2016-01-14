@@ -20,6 +20,7 @@ gem 'slim-rails'
 
 # Use rails_config
 gem 'config'
+gem 'dotenv-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
