@@ -10,7 +10,7 @@ set :branch, 'master'
 
 # Default deploy_to directory is /var/www/my_app_name
 # set :deploy_to, '/var/www/my_app_name'
-set :deploy_to, '/var/www/project/RailsTemplate/current'
+set :deploy_to, '/var/www/project/RailsTemplate'
 
 # Default value for :scm is :git
 # set :scm, :git
@@ -39,6 +39,7 @@ set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', '
 set :keep_releases, 5
 
 set :rbenv_ruby, '2.2.0'
+set :rbenv_path, '/home/fankami/.rbenv/version'
 
 namespace :deploy do
   desc 'Restart application'
