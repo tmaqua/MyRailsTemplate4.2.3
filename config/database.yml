@@ -24,8 +24,8 @@ production:
   adapter: mysql2
   encoding: utf8
   pool: 5
-  username: <%= Settings.mysql.username %>
-  password: <%= Settings.mysql.passward %>
-  socket: <%= Settings.mysql.socket %>
-  host: <%= Settings.mysql.host %>
-  database: APPNAME_production
+  username: <%= ENV["MYSQL_USERNAME"] %>
+  password: <%= ENV["MYSQL_PASSWORD"] %>
+  socket: <%= ENV["MYSQL_SOCKET"] %>
+  host: <%= ENV["MYSQL_HOST"] %>
+  database: <%= ENV["MYSQL_DATABASE"] %>
