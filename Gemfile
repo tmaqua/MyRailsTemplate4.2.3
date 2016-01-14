@@ -31,6 +31,14 @@ group :production do
   gem 'mysql2', '~> 0.3.20'
 end
 
+group :production, :staging do
+  gem 'capistrano'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
+end
+
 group :development, :test do
   gem 'sqlite3'
   gem 'byebug'
