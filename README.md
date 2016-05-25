@@ -8,4 +8,8 @@
  - FactoryGirl
 
 # SetUp
+
+~~~
 bundle install --path=vendor/bundle --jobs=4
+bundle exec rake db:migrate
+~~~
