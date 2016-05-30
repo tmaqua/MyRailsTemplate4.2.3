@@ -17,9 +17,11 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'unicorn'
+gem 'unicorn-worker-killer'
 gem 'slim-rails'
 gem 'config'
 gem 'dotenv-rails'
+gem 'aws-sdk', '~> 2'
 
 group :production do
   gem 'mysql2', '~> 0.3.20'
@@ -31,6 +33,7 @@ group :production, :staging do
   gem 'capistrano-rails'
   gem 'capistrano-rbenv'
   gem 'capistrano3-unicorn'
+  gem 'capistrano-ami', require: false
 end
 
 group :development, :test do
@@ -49,5 +52,3 @@ end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development

@@ -7,8 +7,17 @@
 # server 'example.com', user: 'deploy', roles: %w{app web}, other_property: :other_value
 # server 'db.example.com', user: 'deploy', roles: %w{db}
 
-server '54.238.193.172', user: 'fankami', roles: %w{app}
-set :ssh_options, keys: '~/.ssh/aws.first/id_rsa'
+require 'dotenv'
+Dotenv.load
+
+server ENV["SERVER_ADDRESS"], user: ENV["SERVER_USER"], roles: %w{app db web}
+set :ssh_options, {
+    # keys: %w(~/.ssh/aws.fankami/aws_fankami),
+    keys: %W(#{ENV["SERVER_SSH_KEYS"]}),
+    forward_agent: true,
+    auth_methods: %w(publickey)
+  }
+
 
 
 # role-based syntax
